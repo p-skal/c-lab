@@ -1,6 +1,6 @@
 # 📅 Tomorrow's Date - A *C* program
 
-![Example-great](https://i.imgur.com/nb4MvVw.png) ![Example-ny](https://i.imgur.com/x3ekqZJ.png)
+![Example-great](https://i.imgur.com/xugS7Sq.png)
 
 ### Example Input
 ```c
