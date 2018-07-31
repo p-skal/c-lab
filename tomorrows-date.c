@@ -35,6 +35,8 @@
 
 #define MONTHS_IN_YEAR 12
 
+#define MIN_YEAR 1753
+
 //testing a function that adds new line by itself
 void newline ()  {
     printf("\n");
@@ -48,16 +50,19 @@ main(int argc, char *argv[]) {
 
     //prompt, then scan in current date
     printf("What is the current date? (dd/mm/yyyy): ");
-    scanf("%d/%d/%d", &dd, &mm, &yyyy);
+    if (scanf("%d/%d/%d", &dd, &mm, &yyyy) != 3) {
+        printf("\nThe entered date was incorrect 👎\nPlease reboot & try again using the correct format (dd/mm/yyyy).\n\n");
+        exit(EXIT_FAILURE);
+    }
 
     //error checking for entered date (correct month-day setup + format)
-    if ((mm > MONTHS_IN_YEAR) || (mm < MIN_MONTHS_IN_YEAR) || (dd < MIN_DAYS_IN_MONTH)|| (dd > LNG_MONTH)) {
+    if ((mm > MONTHS_IN_YEAR) || (mm < MIN_MONTHS_IN_YEAR) || (dd < MIN_DAYS_IN_MONTH)|| (dd > LNG_MONTH) || (yyyy < MIN_YEAR)) {
         printf("Please ensure the date entered is correct (dd/mm/yyyy): ");
         scanf("%d/%d/%d", &dd, &mm, &yyyy);
     }
-    if ((mm > MONTHS_IN_YEAR) || (mm < MIN_MONTHS_IN_YEAR) || (dd < MIN_DAYS_IN_MONTH)|| (dd > LNG_MONTH)) {
+    if ((mm > MONTHS_IN_YEAR) || (mm < MIN_MONTHS_IN_YEAR) || (dd < MIN_DAYS_IN_MONTH)|| (dd > LNG_MONTH) || (yyyy < MIN_YEAR)) {
         printf("\nThe entered date was incorrect 👎\nPlease reboot & try again using the correct format (dd/mm/yyyy).\n\n");
-        return 0;
+        exit(EXIT_FAILURE);
     }
 
     //provides month length for specified month - taking leap years into account
@@ -85,7 +90,7 @@ main(int argc, char *argv[]) {
     //error checking for leap years
     if (dd > mm_length) {
         printf("\nThe entered date was incorrect 👎\nPlease reboot & try again using the correct format (dd/mm/yyyy).\n\n");
-        return 0;
+        exit(EXIT_FAILURE);
     }
 
     //calculate tomorrow's date
