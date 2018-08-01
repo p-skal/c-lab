@@ -1,6 +1,6 @@
 # 📅 Grapher - A **C** program
 
-![Example-great](https://i.imgur.com/YLpyteH.png)
+![Example-great](https://i.imgur.com/YLpyteH.png?1)
 
 ### Example Input
 ```c
