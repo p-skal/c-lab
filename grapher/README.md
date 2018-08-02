@@ -1,4 +1,4 @@
-# 📅 Grapher - A **C** program
+# 📊 Grapher - A **C** program
 
 ![Example-great](https://i.imgur.com/YLpyteH.png?1)
 
