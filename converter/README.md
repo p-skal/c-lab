@@ -11,7 +11,9 @@ Enter the magnitude and units: 20F
 ```
 ---
 
-Converts unit such as kg to lbs, kilograms to miles, celsius to fahrenheit.
+Converts **units** such as *kg to lbs*, *kilograms to miles*, *celsius to fahrenheit*.
+
+Other conversions can be easily added by duplicating the conditions and adding more #define's to keep code clean 😉
 
 Just compile it (gcc preferred), run it and enter your numbers.
 
